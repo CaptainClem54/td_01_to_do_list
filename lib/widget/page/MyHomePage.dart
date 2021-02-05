@@ -12,6 +12,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
             final Todo todo = widget.todos[index];
 
             return Card(
-              child: 
-              ListTile(title: Text(todo.title)),
+              child: ListTile(title: Text(todo.title)),
             );
           },
         ),
