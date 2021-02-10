@@ -13,21 +13,25 @@ class TodoDetails extends StatefulWidget {
 }
 
 class _TodoDetailsState extends State<TodoDetails> {
-
-   void _onRemove() {
+  void _onRemove() {
     widget.onRemove(widget.todo);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.lightGreen,
-      child: ListTile(
-        onTap: _onRemove,
-        title: Text(
-          widget.todo.title + " " + widget.todo.content + "    " +widget.todo.done.toString(),
-        ),
-      ),
-    );
+    return Center(
+        child: Column(children: <Widget>[
+        Card(
+          color: Colors.lightGreen,
+          child: ListTile(
+              onTap: _onRemove,
+              title: Text(
+                widget.todo.title +
+                    " " +
+                    widget.todo.content +
+                    "    " +
+                    widget.todo.done.toString(),
+              )))
+    ]));
   }
 }
